@@ -9,7 +9,7 @@ class SnackList(generics.ListCreateAPIView):
     queryset = Snack.objects.all()
     serializer_class = SnackSerializer
 
-class SnackDetail(generics.RetrieveUpdateAPIView):
+class SnackDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAuthenticated,)
     queryset = Snack.objects.all()
     serializer_class = SnackSerializer
